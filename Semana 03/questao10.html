@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Questão 10</title>
+</head>
+
+<body>
+    <div class="container my-3">
+        <p><a href="index.html">Voltar ao Índice</a></p>
+        <h1 class="display-2">Questão 10</h1>
+        <p class="lead">Usando somente estilos baseados em classes do Bootstrap 5, aprimore o formulário da questão 7 adiconando as seguintes situações de validação de campos:</p>
+        <ul class="lead">
+            <li>O campo Nome Completo deve estar marcado como válido;</li>
+            <li>O campo CPF deve estar marcado como inválido e com a mensagem de validação "Campo obrigatório";</li>
+            <li>O campo Data de Nascimento deve estar marcado como válido;</li>
+            <li>O campo Gênero deve estar marcado como inválido e com a mensagem de validação "Campo obrigatório";</li>
+            <li>O campo Endereço deve estar marcado como válido.</li>
+        </ul>
+        <p class="lead">*Os campos válidos devem ter valores fictícios preenchidos nos campos.</p>
+        <hr>
+    </div>
+    <!-- FAZER AQUI -->
+    <div class="container">
+ <form action="" method="post" class="col-lg-8 col-xl-6 col-md-12 mx-auto needs-validation" novalidate>
+      <h3 class="display-6">Cadastro de Cliente</h3>
+      <hr>
+      <div class="mb-3">
+        <label class="form-label" for="nome">Nome Completo</label>
+        <input class="form-control is-valid" type="nome" id="nome" value="Fulano de Tal" required>
+      </div>
+      <div class="row mb-3">
+        <div class="col-xl-3 col-12">
+          <label class="col-form-label" for="cpf">CPF</label>
+          <input class="form-control is-invalid" type="text" id="cpf" required>
+          <div class="invalid-feedback">
+            Campo obrigatório.
+          </div>
+        </div>
+        <div class="col-xl-4 col-12">
+          <label class="col-form-label" for="nascimento">Nascimento</label>
+          <input class="form-control is-valid" type="date" id="nascimento" value="1980-01-01" required>
+        </div>
+        <div class="col-xl-5 col">
+          <label class="col-form-label" for="genero">Gênero</label>
+          <select name="genero" id="genero" class="form-select is-invalid" required>
+            <option value=" ">Selecione um gênero</option>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+          </select>
+          <div class="invalid-feedback">
+            Campo obrigatório.
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="mb-3 col">
+          <label class="col-form-label" for="endereco">Endereço Completo</label>
+          <textarea id="endereco" class="form-control is-valid" rows="3" required>Rua dos Programadores, 0101,&#10;Tecnolândia/ES - Brasil</textarea>
+        </div>
+      </div>
+      <div class="mb-3 col">
+        <input type="submit" value="Enviar" class="btn btn-primary">
+      </div>
+    </form>
+    </div>
+  <script>
+    (() => {
+  'use strict'
+  const forms = document.querySelectorAll('.needs-validation')
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+  </script>
+</body>
+
+</html>

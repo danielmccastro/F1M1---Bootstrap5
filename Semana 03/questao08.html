@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Questão 08</title>
+</head>
+
+<body>
+  <div class="container my-3">
+    <p><a href="index.html">Voltar ao Índice</a></p>
+    <h1 class="display-2">Questão 08</h1>
+    <p class="lead">Usando somente estilos baseados em classes do Bootstrap 5, aprimore o formulário da questão 7 para
+      que todos os seus campos fiquem com títulos flutuantes.</p>
+    <hr>
+  </div>
+  <!-- FAZER AQUI -->
+  <div class="container">
+    <form action="" method="post" class="col-lg-8 col-xl-6 col-md-12 mx-auto">
+      <h3 class="display-6">Cadastro de Cliente</h3>
+      <hr>
+      <div class="mb-3 form-floating">
+        <input class="form-control" type="text" id="nome" placeholder="">
+        <label class="form-label" for="nome">Nome Completo</label>
+      </div>
+      <div class="row mb-3 g-3">
+        <div class="col-xl-3 col-12 form-floating">
+          <input class="form-control" type="text" id="cpf" placeholder="">
+          <label class="col-form-label ms-2" for="cpf">CPF</label>
+        </div>
+        <div class="col-xl-4 col-12 form-floating">
+          <input class="form-control" type="date" id="nascimento" placeholder="">
+          <label class="col-form-label ms-2" for="nascimento">Nascimento</label>
+        </div>
+        <div class="col-xl-5 col-12 form-floating">
+          <select name="genero" id="genero" class="form-select" placeholder=" ">
+            <option value=" ">Selecione um gênero</option>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+          </select>
+          <label class="col-form-label ms-2" for="genero">Gênero</label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="mb-3 col form-floating">
+          <textarea id="endereco" class="form-control" rows="3" placeholder=""></textarea>
+          <label class="col-form-label" for="endereco">Endereço Completo</label>
+        </div>
+      </div>
+      <div class="mb-3 col">
+        <input type="submit" value="Salvar" class="btn btn-primary">
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
